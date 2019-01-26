@@ -11,13 +11,13 @@
 	
 	$sql = "UPDATE sevenmods SET nombre='$nombre', despcripcion='$descripcion', autor='$autor', version='$version', web='$web' WHERE id = '$id'";
 	$resultado = $mysqli->query($sql);
-	$id_insert = $mysqli->insert_id;
+	$id_insert =  $id;
 	
 	if($_FILES["archivo"]["error"]>0){
 		echo "Error al cargar archivo";	
 		} else {
 		
-			$permitidos = array("application/zip, application/rar");
+		$permitidos = array("application/zip", "application/rar", "application/x-zip-compressed", "application/octet-stream");
 		$limite_kb = 200;
 		
 		if(in_array($_FILES["archivo"]["type"], $permitidos) && $_FILES["archivo"]["size"] <= $limite_kb * 1024){

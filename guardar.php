@@ -17,8 +17,8 @@
 		echo "Error al cargar archivo";	
 		} else {
 		
-		$permitidos = array("application/zip, application/rar");
-		$limite_kb = 200;
+		$permitidos = array("application/zip", "application/rar", "application/x-zip-compressed", "application/octet-stream");
+		$limite_kb = 2000;
 		
 		if(in_array($_FILES["archivo"]["type"], $permitidos) && $_FILES["archivo"]["size"] <= $limite_kb * 1024){
 			
@@ -44,7 +44,8 @@
 			}
 			
 			} else {
-			echo "Archivo no permitido o excede el tamaño";
+				echo $_FILES["archivo"]["type"];
+			echo "\nArchivo no permitido o excede el tamaño";
 		}
 		
 	}
