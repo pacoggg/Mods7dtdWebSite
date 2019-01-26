@@ -65,6 +65,7 @@
 							<th>Sitio Web</th>
 							<th></th>
 							<th></th>
+							<th></th>
 						</tr>
 					</thead>
 					
