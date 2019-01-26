@@ -17,7 +17,7 @@
 		echo "Error al cargar archivo";	
 		} else {
 		
-		$permitidos = array("image/gif","image/png","application/pdf");
+		$permitidos = array("application/zip, application/rar");
 		$limite_kb = 200;
 		
 		if(in_array($_FILES["archivo"]["type"], $permitidos) && $_FILES["archivo"]["size"] <= $limite_kb * 1024){
