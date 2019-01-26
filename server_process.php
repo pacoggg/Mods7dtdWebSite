@@ -117,7 +117,7 @@
 		$row = array();
 		for ( $i=0 ; $i<count($aColumnas) ; $i++ )
 		{
-			if ( $aColumnas[$i] == "version" )
+			if ( $aColumnas[$i] == "Versión" )
 			{
 				/* Special output formatting for 'version' column */
 				$row[] = ($aRow[ $aColumnas[$i] ]=="0") ? '-' : $aRow[ $aColumnas[$i] ];

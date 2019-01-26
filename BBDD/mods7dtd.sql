@@ -41,6 +41,17 @@ CREATE TABLE `sevenmods` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Volcado de datos para la tabla `sevenmods`
+--
+
+INSERT INTO `sevenmods` (`id`, `nombre`, `descripcion`, `autor`, `version`, `web`) VALUES
+(1, 'Rifle Caza', 'AÃ±ade dos cargadores mÃ¡s para la municiÃ³n del rifle de 3 y 5 balas', 'KaftSpain/Darkaft', '1.0', 'Comunidad ArMoKaf'),
+(2, 'Barrels and Alcohol', 'Barriles funcionales para fermentar las bebidas', 'DarKaft/KaftSpain', '1.0', 'Comunidad ArMoKaf'),
+(3, 'Puertas Y Bloques', 'Nuevos bloques entre ellos la puerta de la prisiÃ³n utilizable, puerta garaje abatible y barrera de cemento.', 'KaftSpain', '0.4', 'Comunidad ArMoKaf'),
+(4, 'Proyect Tesla', 'Electricidad inalÃ¡mbrica y mas luces incluida la roja.', 'DarKaft/KaftSpain, codigo para la inalambrica Zone', '2.4', 'Comunidad ArMoKaf'),
+(5, 'Agua por doquier', 'Agua de lavamanos, nevera, grifos', 'KaftSpain', '0.4', 'Comunidad ArMoKaf');
+
+--
 -- Índices para tablas volcadas
 --
 

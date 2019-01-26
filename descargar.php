@@ -15,12 +15,9 @@
 			{
 				if (!(is_dir($archivo)))//verificamos si es o no un directorio
 				{
-				$nombreArchivo=$carpeta."/".$archivo;//imprimimos el nombre del archivo
-				//PONER BOTON PARA DESCARGAR
-				echo '<div class="container"><div class="row"><div class="row" style="text-align:center">
-				<a href='.$nombreArchivo.' class="btn btn-primary">Descargar</a></div></div></div>';
+					$fileDown = $carpeta."/".$archivo;//imprimimos el nombre del archivo
+					//PONER BOTON PARA DESCARGAR
 				}
-				
 			}
 	}
 	
@@ -40,7 +37,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="row" style="text-align:center">
-				<a href="index.php" class="btn btn-primary">Regresar</a>
+					<div class="container">
+						<div class="row">
+							<div class="row" style="text-align:center">
+								<a href="<?php echo $archivo; ?>" class="btn btn-success">Descargar</a>
+							</div>
+						</div>
+					</div>	
+					<a href="index.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

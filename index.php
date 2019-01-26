@@ -104,7 +104,8 @@
 				
 				$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
 			});
-		</script>	
+		</script>
+		<!-- Fin Modal -->	
 		
 	</body>
 </html>	
