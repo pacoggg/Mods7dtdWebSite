@@ -97,7 +97,7 @@
 								{
 									if (!is_dir($archivo)){
 										//echo "<div data='".$path."/".$archivo."'><a href='".$path."/".$archivo."' title='Ver Archivo Adjunto'><span class='glyphicon glyphicon-picture'></span></a>";
-										echo "$archivo <a href='#' data-href='eliminar.php?id=".$id."' data-toggle='modal' data-target='#confirm-delete'><span class='glyphicon glyphicon-trash'></span></a></div>";
+										echo "$archivo <a href='#' data-href='del_archivo.php?id=".$id."' data-toggle='modal' data-target='#confirm-delete'><span class='glyphicon glyphicon-trash'></span></a></div>";
 										//echo "<img src='files/$id/$archivo' width='300' />";
 									}
 								}
@@ -123,11 +123,11 @@
 					
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Eliminar Registro</h4>
+						<h4 class="modal-title" id="myModalLabel">Eliminar Archivo</h4>
 					</div>
 					
 					<div class="modal-body">
-						¿Desea eliminar este registro?
+						¿Desea eliminar el archivo?
 					</div>
 					
 					<div class="modal-footer">

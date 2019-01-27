@@ -17,6 +17,7 @@
 				{
 					$fileDown = $carpeta."/".$archivo;//imprimimos el nombre del archivo
 					//PONER BOTON PARA DESCARGAR
+					
 				}
 			}
 	}
@@ -40,6 +41,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="row" style="text-align:center">
+								<a href='#' data-href='eliminar.php?id=".$aRow['id']."' data-toggle='modal' data-target='#confirm-delete'><span class='glyphicon glyphicon-trash'></span></a>
 								<a href="<?php echo $archivo; ?>" class="btn btn-success">Descargar</a>
 							</div>
 						</div>
@@ -48,5 +50,35 @@
 				</div>
 			</div>
 		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Eliminar Registro</h4>
+					</div>
+					
+					<div class="modal-body">
+						¿Desea eliminar este registro?
+					</div>
+					
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<a class="btn btn-danger btn-ok">Delete</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			$('#confirm-delete').on('show.bs.modal', function(e) {
+				$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+				
+				$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+			});
+		</script>
+		<!-- Fin Modal -->
 	</body>
 </html>

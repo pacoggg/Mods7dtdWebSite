@@ -129,7 +129,7 @@
 			}
 		}
 		
-		$row[] = "<td><a href='descargar.php?id=".$aRow['id']."'><span class='glyphicon glyphicon-download'></span></a></td>";
+		$row[] = "<td><a href='#' data-href='descargar.php?id=".$aRow['id']."' data-toggle='modal' data-target='#confirm-download'><span class='glyphicon glyphicon-download'></span></a></td>";
 		$row[] = "<td><a href='modificar.php?id=".$aRow['id']."'><span class='glyphicon glyphicon-pencil'></span></a></td>";
 		$row[] = "<td><a href='#' data-href='eliminar.php?id=".$aRow['id']."' data-toggle='modal' data-target='#confirm-delete'><span class='glyphicon glyphicon-trash'></span></a></td>";
 		$output['aaData'][] = $row;
