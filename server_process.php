@@ -102,6 +102,7 @@
 	$aResultTotal = $rResultTotal->fetch_array();
 	$iTotal = $aResultTotal[0];
 	
+
 	/*
 		* Output
 	*/
